@@ -11,11 +11,11 @@ public class Fattoriale extends Thread{
         return val;
     }
     
-    public long fattoriale(int num) throws NumeroNegativo{
+    public int fattoriale(int num) throws NumeroNegativo{
         if(num == 0)
             val = 1;        
         else if(num > 0)
-            val = num * (int) fattoriale(num - 1);
+            val = num * fattoriale(num - 1);
         else
             throw new NumeroNegativo();
         return val;
